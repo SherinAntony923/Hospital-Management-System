@@ -416,7 +416,7 @@ class MedicineViewSet(viewsets.ModelViewSet):
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
-        context.update({"request": self.request})  # ✅ Ensure request is passed
+        context.update({"request": self.request})  
         return context
 
 
@@ -427,7 +427,7 @@ class LaboratoryItemViewSet(viewsets.ModelViewSet):
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
-        context.update({"request": self.request})  # ✅ Ensure request is passed
+        context.update({"request": self.request})  
         return context
 
 from .models import Order
