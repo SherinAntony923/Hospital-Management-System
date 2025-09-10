@@ -23,7 +23,7 @@ from .serializers import (
 
 # Token with role info
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
-    username_field = 'email'   # ✅ Explicitly define
+    username_field = 'email'   
 
     def validate(self, attrs):
         data = super().validate(attrs)
@@ -36,7 +36,7 @@ class MyTokenObtainPairView(TokenObtainPairView):
 # Register a patient
 
 class PatientRegisterView(APIView):
-    permission_classes = [AllowAny]  # ✅ Make this endpoint public
+    permission_classes = [AllowAny]  
 
     def post(self, request):
         serializer = PatientRegisterSerializer(data=request.data)
@@ -416,7 +416,7 @@ class MedicineViewSet(viewsets.ModelViewSet):
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
-        context.update({"request": self.request})  # ✅ Ensure request is passed
+        context.update({"request": self.request})  
         return context
 
 
@@ -427,7 +427,7 @@ class LaboratoryItemViewSet(viewsets.ModelViewSet):
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
-        context.update({"request": self.request})  # ✅ Ensure request is passed
+        context.update({"request": self.request})  
         return context
 
 from .models import Order
