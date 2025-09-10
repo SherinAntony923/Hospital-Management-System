@@ -1,0 +1,74 @@
+/* Banner */
+.home-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url("https://images.pexels.com/photos/7583382/pexels-photo-7583382.jpeg")
+      no-repeat center center;
+  background-size: cover;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.home-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Gradient Buttons */
+.btn-gradient {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(90deg, #0056b3, #009fc1);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.service-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+
+/* About Image */
+.about-img {
+  max-height: 350px;
+  object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-banner {
+    height: 300px;
+  }
+  .home-banner h1 {
+    font-size: 2rem;
+  }
+  .card img {
+    height: 180px;
+  }
+  .about-img {
+    max-height: 250px;
+  }
+}
